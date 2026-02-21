@@ -9,8 +9,8 @@ script = ExtResource("1_tt5l4")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=702220109]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 157.0
+offset_bottom = 70.0
 
 [node name="Heart1" type="TextureRect" parent="HBoxContainer" unique_id=1585528174]
 layout_mode = 2
