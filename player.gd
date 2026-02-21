@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
-var speed: float = 600
+@onready var health_ui = get_tree().current_scene.get_node("UI/HealthUI")
 
+var speed: float = 600
 var nearby_item: Node = null 
+var health = 3
 
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -24,3 +26,7 @@ func _input(event):
 		print("Interacted with: ", nearby_item.name)
 		nearby_item.queue_free()
 		nearby_item = null
+
+func take_damage(): # take 1 damage from monster
+	health -= 1
+	health_ui.set_health(health)
