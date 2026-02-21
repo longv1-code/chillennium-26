@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://ctc6a20gab0xo"]
+[gd_scene format=3 uid="uid://bthdv30137x3d"]
 
-[ext_resource type="Script" uid="uid://byihvn1bnee8r" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Script" path="res://player.gd" id="1_4flbx"]
 [ext_resource type="PackedScene" uid="uid://3u1j4qe6ad7h" path="res://health_ui.tscn" id="2_onrkg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
