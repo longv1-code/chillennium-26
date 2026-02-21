@@ -7,10 +7,13 @@ var qte_target: Node = null
 var qte_time: float = 0.0
 var qte_duration: float = 3.0 # seconds to react
 
+var nearby_item: Node = null 
+
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var velocity = direction * speed
 	move_and_slide()
+
 
 func _process(delta):
 	# quick time event
@@ -35,3 +38,8 @@ func _on_detection_area_body_entered(body: Node2D) -> void:
 		qte_target = body
 		qte_time = qte_duration
 		print("QTE triggered.")
+	
+func _on_interaction_area_body_entered(body: Node2D) -> void:
+	if body.is_ingroup("items"): # detects nearby items
+		nearby_item = body
+		print("Item in range: ", body.name)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d2iq535oi7c5h"]
 
-[ext_resource type="PackedScene" uid="uid://dnhab6fsmfg3e" path="res://control.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://dnhab6fsmfg3e" path="res://sanitybar.tscn" id="1_80nbo"]
 
 [node name="Main" type="Node2D" unique_id=95656525]
 
