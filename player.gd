@@ -1,13 +1,13 @@
 extends CharacterBody2D
 
-@onready var health_ui = $UI/HealthUI
-
 var speed: float = 6000
 var nearby_item: Node = null 
 var health = 3
 
 var qte_active: bool = false
 var qte_target: Node = null
+
+signal qte_triggered(enemy)
 
 # movement
 func _physics_process(delta: float) -> void:
@@ -31,3 +31,13 @@ func _input(event):
 		print("Interacted with: ", nearby_item.name)
 		nearby_item.queue_free()
 		nearby_item = null
+
+func _on_detection_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("enemies") and not qte_active:
+		qte_active = true
+		qte_target = body
+		qte_triggered.emit(body)
+
+func _on_enemy_detection_area_body_exited(body: Node2D) -> void:
+	if body == qte_target and not qte_active:
+		qte_target = null

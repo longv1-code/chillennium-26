@@ -3,6 +3,9 @@ extends Control
 var max_health: int =  3
 var current_health: int = 3
 
+@export var full_heart: Texture2D
+@export var empty_heart: Texture2D
+
 @onready var hearts = [
 	$HBoxContainer/Heart1,
 	$HBoxContainer/Heart2,
@@ -18,4 +21,4 @@ func set_hearts(value: int): # sets amount of hearts
 	
 func update_hearts(): # makes current hearts visible
 	for i in range(max_health):
-		hearts[i].visible = i < current_health
+		hearts[i].texture = full_heart if i < current_health else empty_heart
