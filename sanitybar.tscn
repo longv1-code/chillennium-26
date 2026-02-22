@@ -13,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0fbet")
 
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=648404328]
+[node name="SanityBar" type="ProgressBar" parent="." unique_id=648404328]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

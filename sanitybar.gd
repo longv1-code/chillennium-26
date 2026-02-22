@@ -63,7 +63,7 @@ func check_stages(): # triggers stages
 		#curr_state = 3
 		print("Stage 3 Started")
 	elif percent <= stage_4_max_value and not triggered_stage_4:
-		triggered_stage_4
+		triggered_stage_4 = true
 		max_value = stage_4_max_value
 		curr_drain_mult = 1
 		#curr_state = 4

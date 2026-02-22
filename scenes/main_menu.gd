@@ -9,7 +9,8 @@ func _ready():
 	
 func _on_start_pressed():
 	print("Start Game clicked.")
+	get_tree().change_scene_to_file("res://scenes/game.tscn")
 
 func _on_credit_pressed():
 	print("Credits clicked.")
-	get_tree().change_scene_to_file("res://credits.tscn")
+	get_tree().change_scene_to_file("res://scenes/credits.tscn")

@@ -11,15 +11,10 @@ config_version=5
 [application]
 
 config/name="chillennium 26"
-run/main_scene="uid://4pkk3c1yeq43"
+run/main_scene="uid://clyasn0g5qrv1"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 "<<<<<<<HEAD[display]window/size/viewport_width"=640
-window/size/viewport_height=360
-
-[display]
-
-window/size/viewport_width=640
 window/size/viewport_height=360
 
 [display]

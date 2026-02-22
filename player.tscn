@@ -20,14 +20,17 @@ script = ExtResource("1_4flbx")
 [node name="HealthUI" parent="UI" unique_id=2111925015 instance=ExtResource("2_onrkg")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1647845844]
+visible = false
 shape = SubResource("CapsuleShape2D_onrkg")
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=98532339]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1489854229]
 shape = SubResource("CircleShape2D_i3pqv")
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=474102073]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=948666137]
 shape = SubResource("CircleShape2D_4flbx")
