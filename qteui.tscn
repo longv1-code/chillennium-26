@@ -58,3 +58,12 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_sylqv")
 expand_mode = 1
+
+[node name="SpamHeart" type="ProgressBar" parent="QTEContainer" unique_id=22619522]
+layout_mode = 0
+offset_left = 135.5
+offset_top = 77.0
+offset_right = 218.5
+offset_bottom = 90.0
+fill_mode = 1
+show_percentage = false

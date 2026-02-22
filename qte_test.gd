@@ -14,7 +14,8 @@ func _input(event):
 # optional Button signal:
 func _on_test_button_pressed() -> void:
 	print("Starting Timing QTE")
-	qte_ui.start_qte(test_enemy)
+	$TestButton.release_focus()
+	qte_ui.start_spam_qte(test_enemy)
 
 func _on_qte_success(enemy):
 	print("QTE Success! Target:", enemy.name)
