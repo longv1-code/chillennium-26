@@ -244,10 +244,6 @@ animation = &"move down"
 frame = 5
 frame_progress = 0.33333305
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=721672538]
-scale = Vector2(0.175, 0.175)
-texture = ExtResource("3_hqtel")
-
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]
