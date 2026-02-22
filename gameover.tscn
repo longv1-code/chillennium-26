@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cyquejbn5ooko"]
+
+[ext_resource type="Script" uid="uid://soxv8hf5abb" path="res://gameover.gd" id="1_4nh4k"]
+
+[node name="gameover" type="Control" unique_id=1519405473]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4nh4k")
+
+[node name="Background" type="ColorRect" parent="." unique_id=885533227]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.23031491, 0.23031494, 0.23031494, 1)
+
+[node name="Game Over" type="Label" parent="." unique_id=116052177]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -134.84778
+offset_top = 259.0
+offset_right = 148.84778
+offset_bottom = 334.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 37
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="YesButton" type="Button" parent="." unique_id=1379827227]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 375.0
+offset_right = 613.0
+offset_bottom = 417.0
+theme_override_font_sizes/font_size = 24
+text = "Try Again"
+
+[node name="NoButton" type="Button" parent="." unique_id=489950088]
+layout_mode = 0
+offset_left = 684.0
+offset_top = 374.0
+offset_right = 852.0
+offset_bottom = 416.0
+theme_override_font_sizes/font_size = 24
+text = "Quit"

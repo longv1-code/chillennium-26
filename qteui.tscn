@@ -51,6 +51,13 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="SpamHeart" type="ProgressBar" parent="QTEContainer/SpamBar" unique_id=22619522]
+layout_mode = 0
+offset_left = 85.5
+offset_top = 62.0
+offset_right = 267.5
+offset_bottom = 73.0
+
 [node name="QteBar" type="Sprite2D" parent="QTEContainer/SpamBar" unique_id=883097646]
 position = Vector2(177.5, 83)
 scale = Vector2(0.4, 0.4)
@@ -62,5 +69,11 @@ offset_left = 125.5
 offset_top = 80.0
 offset_right = 227.5
 offset_bottom = 87.0
+>>>>>>> Stashed changes
 fill_mode = 1
 show_percentage = false
+
+[node name="QteBar" type="Sprite2D" parent="QTEContainer/SpamBar" unique_id=883097646]
+position = Vector2(177.5, 68)
+scale = Vector2(0.7291667, 0.7291667)
+texture = ExtResource("4_t4wb5")

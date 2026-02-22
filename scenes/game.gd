@@ -6,6 +6,9 @@ extends Node2D
 @onready var sanity_bar = $UI/SanityBar
 @onready var camera = $Player/Camera2D
 @onready var lantern = $Player/PointLight2D
+@onready var game_over_screen = $GameOverScreen
+
+var current_stage: int = 1
 
 var maps = {
 	1: preload("res://scenes/dungeon_tm.tscn"),
@@ -25,6 +28,7 @@ var spawn_positions = {
 }
 
 func _ready():
+	game_over_screen.visible = false
 	player.qte_triggered.connect(qte_ui.start_qte)
 	player.qte_spam_triggered.connect(qte_ui.start_spam_qte)
 	qte_ui.qte_success.connect(_on_qte_success)
@@ -55,15 +59,20 @@ func _on_qte_success(enemy):
 
 func _on_qte_fail():
 	print("QTE Failed!")
-	health_ui.set_hearts(health_ui.current_health - 1)
+	var new_health = health_ui.current_health - 1
+	health_ui.set_hearts(new_health)
 	if player.qte_target:
 		player.qte_target.queue_free()
 	player.qte_target = null
 	player.qte_active = false
 	player.set_physics_process(true)
+	player.show()
 	player.get_node("AnimatedSprite2D").show()
+	if new_health <= 0:
+		show_game_over()
 
 func _on_map_changed(map_num: int):
+	current_stage = map_num
 	if map_num == 1:
 		return # no transition for first stage
 	start_transition(map_num)
@@ -117,3 +126,18 @@ func start_transition(map_num: int):
 		transitioning = false
 	)
 	
+func show_game_over():
+	game_over_screen.visible = true
+	player.set_physics_process(false)
+	$GameOverScreen/Control/YesButton.pressed.connect(_on_retry)
+	$GameOverScreen/Control/NoButton.pressed.connect(_on_quit)
+
+func _on_retry():
+	game_over_screen.visible = false
+	$GameOverScreen/Control/YesButton.pressed.disconnect(_on_retry)
+	$GameOverScreen/Control/NoButton.pressed.disconnect(_on_quit)
+	health_ui.set_hearts(3)
+	start_transition(current_stage)
+
+func _on_quit():
+	get_tree().quit()

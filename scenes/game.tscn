@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://8taesmmsmvrb" path="res://qteui.tscn" id="3_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bthdv30137x3d" path="res://player.tscn" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://dhwe0e6bpik2p" path="res://health_ui.tscn" id="5_p57ef"]
+[ext_resource type="PackedScene" uid="uid://cyquejbn5ooko" path="res://gameover.tscn" id="5_u5sy4"]
 
 [node name="Game" type="Node2D" unique_id=95656525]
 script = ExtResource("1_game")
@@ -34,9 +35,55 @@ offset_top = 6.0
 offset_right = 31.0
 offset_bottom = 6.0
 
+[node name="gameover" parent="UI" unique_id=1519405473 instance=ExtResource("5_u5sy4")]
+
 [node name="Player" parent="." unique_id=826294922 groups=["player"] instance=ExtResource("4_iywne")]
 position = Vector2(5296, 2020)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1236499846]
 visible = false
 color = Color(0, 0, 0, 1)
+
+[node name="GameOverScreen" type="CanvasLayer" parent="." unique_id=111111111]
+visible = false
+
+[node name="Control" type="Control" parent="GameOverScreen" unique_id=222222222]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="GameOverScreen/Control" unique_id=333333333]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7)
+
+[node name="YesButton" type="Button" parent="GameOverScreen/Control" unique_id=444444444]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 50.0
+text = "Try Again"
+
+[node name="NoButton" type="Button" parent="GameOverScreen/Control" unique_id=555555555]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = 70.0
+offset_right = 60.0
+offset_bottom = 100.0
+text = "Quit"
