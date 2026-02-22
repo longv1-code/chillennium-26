@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://8taesmmsmvrb" path="res://qteui.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bthdv30137x3d" path="res://player.tscn" id="3_iywne"]
 [ext_resource type="PackedScene" uid="uid://dhwe0e6bpik2p" path="res://health_ui.tscn" id="4_p57ef"]
-[ext_resource type="Texture2D" uid="uid://dhxkvdiv66cut" path="res://main_player.png" id="5_lbhrr"]
+[ext_resource type="PackedScene" path="res://scenes/evil_tm.tscn" id="6_p57ef"]
 
 [sub_resource type="GDScript" id="GDScript_80nbo"]
 script/source = "extends Node2D
@@ -48,9 +48,10 @@ offset_bottom = -96.0
 [node name="HealthUI" parent="UI" unique_id=2111925015 instance=ExtResource("4_p57ef")]
 
 [node name="Player" parent="." unique_id=826294922 instance=ExtResource("3_iywne")]
-position = Vector2(549, 255)
+position = Vector2(1391, -9)
 
-[node name="MainPlayer" type="Sprite2D" parent="." unique_id=102409634]
-position = Vector2(253, 186)
-scale = Vector2(0.2125, 0.2875)
-texture = ExtResource("5_lbhrr")
+[node name="evil_tm" parent="." unique_id=1464706506 instance=ExtResource("6_p57ef")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1236499846]
+visible = false
+color = Color(0, 0, 0, 1)

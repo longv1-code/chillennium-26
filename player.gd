@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed: float = 6000
+var speed: float = 600
 var nearby_item: Node = null 
 var health = 3
 
