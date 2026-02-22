@@ -48,9 +48,9 @@ offset_right = 663.0
 offset_bottom = -96.0
 
 [node name="HealthUI" parent="UI" unique_id=2111925015 instance=ExtResource("4_p57ef")]
-offset_left = 10.0
+offset_left = 31.0
 offset_top = 6.0
-offset_right = 10.0
+offset_right = 31.0
 offset_bottom = 6.0
 
 [node name="Player" parent="." unique_id=826294922 instance=ExtResource("3_iywne")]
