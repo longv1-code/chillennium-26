@@ -12,3 +12,4 @@ func _on_start_pressed():
 
 func _on_credit_pressed():
 	print("Credits clicked.")
+	get_tree().change_scene_to_file("res://credits.tscn")
