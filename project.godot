@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="chillennium 26"
-run/main_scene="uid://cv6egniu8glmy"
+run/main_scene="uid://clyasn0g5qrv1"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -65,4 +65,4 @@ escape={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+environment/defaults/default_clear_color=Color(0.4045111, 0.40451115, 0.4045111, 1)

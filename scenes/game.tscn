@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://sneowpihj7ic"]
 
-[ext_resource type="PackedScene" path="res://scenes/void_tm.tscn" id="1_iywne"]
+[ext_resource type="PackedScene" uid="uid://d2piwlp1ejsuk" path="res://scenes/void_tm.tscn" id="1_iywne"]
 [ext_resource type="PackedScene" uid="uid://cv6egniu8glmy" path="res://sanitybar.tscn" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://8taesmmsmvrb" path="res://qteui.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bthdv30137x3d" path="res://player.tscn" id="3_iywne"]
@@ -54,7 +54,7 @@ offset_right = 10.0
 offset_bottom = 6.0
 
 [node name="Player" parent="." unique_id=826294922 instance=ExtResource("3_iywne")]
-position = Vector2(1391, -9)
+position = Vector2(3335, -134)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1236499846]
 visible = false
