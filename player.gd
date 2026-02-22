@@ -31,16 +31,3 @@ func _input(event):
 		print("Interacted with: ", nearby_item.name)
 		nearby_item.queue_free()
 		nearby_item = null
-
-# monster interaction
-func take_damage(): # take 1 damage from monster
-	print("Player damaged")
-	health -= 1
-	health_ui.set_health(health)
-signal qte_triggered(enemy)
-
-func _on_detection_area_body_entered(body: Node2D) -> void: # if monster is within radius to trigger QTE
-	if body.is_in_group("enemies") and not qte_active:
-		qte_active = true
-		qte_target = body
-		emit_signal("qte_triggered", body)
