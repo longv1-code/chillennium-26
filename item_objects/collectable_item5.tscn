@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://67xdljdoc21b"]
+
+[ext_resource type="Script" uid="uid://cfbv1y6b2fi5k" path="res://scenes/collectable_item.gd" id="1_p2viy"]
+[ext_resource type="Texture2D" uid="uid://bspe3mj1suy24" path="res://collectabe_items/ItemEmerald.png" id="2_p2viy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8v6b"]
+size = Vector2(36, 44)
+
+[node name="Collectable_item" type="StaticBody2D" unique_id=781395988 groups=["items"]]
+script = ExtResource("1_p2viy")
+item_name = "collectable_emerald"
+item_texture = ExtResource("2_p2viy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1764654972]
+position = Vector2(1, 0)
+texture = ExtResource("2_p2viy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1547248401]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_t8v6b")

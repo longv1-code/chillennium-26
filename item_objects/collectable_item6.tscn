@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cd4u44hnklrym"]
+
+[ext_resource type="Script" uid="uid://uoxxl4ddgeys" path="res://scenes/collectable_item.gd" id="1_xp5jn"]
+[ext_resource type="Texture2D" uid="uid://bjv7me5qy2x82" path="res://collectabe_items/ItemBaseball.png" id="2_xp5jn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8v6b"]
+size = Vector2(42, 44)
+
+[node name="Collectable_item" type="StaticBody2D" unique_id=781395988 groups=["items"]]
+script = ExtResource("1_xp5jn")
+item_name = "baseball"
+item_texture = ExtResource("2_xp5jn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1764654972]
+position = Vector2(1, 0)
+texture = ExtResource("2_xp5jn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1547248401]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_t8v6b")

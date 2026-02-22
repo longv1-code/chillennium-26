@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bhjplh824aqru"]
+
+[ext_resource type="Script" uid="uid://cdp3k0wsjxure" path="res://scenes/floating_text.gd" id="1_45khh"]
+
+[node name="FloatingText" type="Label" unique_id=1628174920]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "da helly"
+script = ExtResource("1_45khh")

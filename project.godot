@@ -22,8 +22,12 @@ window/size/viewport_height=720
 
 [global_group]
 
+<<<<<<< Updated upstream
 enemies=""
 player=""
+=======
+items=""
+>>>>>>> Stashed changes
 
 [input]
 

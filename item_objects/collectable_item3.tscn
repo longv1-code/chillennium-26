@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://df1y5psv17jiw"]
+
+[ext_resource type="Script" uid="uid://cfbv1y6b2fi5k" path="res://scenes/collectable_item.gd" id="1_r078c"]
+[ext_resource type="Texture2D" uid="uid://cxljnm7pa1qcv" path="res://collectabe_items/ItemSaphire.png" id="2_r078c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8v6b"]
+size = Vector2(36, 44)
+
+[node name="Collectable_item" type="StaticBody2D" unique_id=781395988 groups=["items"]]
+script = ExtResource("1_r078c")
+item_name = "collebectable_saffire"
+item_texture = ExtResource("2_r078c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1764654972]
+position = Vector2(1, 0)
+texture = ExtResource("2_r078c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1547248401]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_t8v6b")

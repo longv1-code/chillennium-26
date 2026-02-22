@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://6nocwyiuunli"]
+
+[node name="TextEdit" type="TextEdit" unique_id=524661741]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Text"

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bnjyrd5aiellm"]
+
+[ext_resource type="Script" uid="uid://uoxxl4ddgeys" path="res://scenes/collectable_item.gd" id="1_tnl6c"]
+[ext_resource type="Texture2D" uid="uid://bbu7qxk271kps" path="res://collectabe_items/ItemBone.png" id="2_tnl6c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8v6b"]
+size = Vector2(44, 44)
+
+[node name="Collectable_item" type="StaticBody2D" unique_id=781395988 groups=["items"]]
+script = ExtResource("1_tnl6c")
+item_name = "bone"
+item_texture = ExtResource("2_tnl6c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1764654972]
+position = Vector2(1, 0)
+texture = ExtResource("2_tnl6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1547248401]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_t8v6b")

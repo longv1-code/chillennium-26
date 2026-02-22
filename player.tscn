@@ -241,7 +241,7 @@ shadow_enabled = true
 texture = ExtResource("3_hqtel")
 script = ExtResource("3_sweqy")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1797708228]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1797708228 groups=["player"]]
 position = Vector2(-0.14839172, 1.1691284)
 scale = Vector2(0.16599435, 0.16599435)
 sprite_frames = SubResource("SpriteFrames_j5n4i")

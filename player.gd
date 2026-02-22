@@ -12,8 +12,7 @@ signal qte_spam_triggered(enemy)
 
 @onready var anim = $AnimatedSprite2D
 
-#const FLOATING_TEXT = preload("res://floating_text.tscn") 	
-# movement
+const FLOATING_TEXT = preload("res://scenes/floating_text.tscn")# movement
 func _physics_process(_delta: float) -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction * speed
@@ -47,10 +46,11 @@ func _unhandled_input(event):
 	if event.is_action_pressed("interact") and nearby_item: # interact with item
 		print("Interacted with: ", nearby_item.name)
 		
-		#var text_instance = FLOATING_TEXT.instantiate()
-		#text_instance.text = "wha da helly...." # You can change what it says here!
-		#text_instance.global_position = nearby_item.global_position # Spawn it at the item
-		#get_tree().current_scene.add_child(text_instance) # Add it to the game world
+		# Spawn the floating text
+		var text_instance = FLOATING_TEXT.instantiate()
+		text_instance.text = "+ " + nearby_item.item_name # Or whatever variable holds your item's name
+		text_instance.global_position = nearby_item.global_position 
+		get_tree().current_scene.add_child(text_instance)
 		
 		nearby_item.queue_free()
 		nearby_item = null
