@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dnhab6fsmfg3e"]
 
 [ext_resource type="Script" uid="uid://celftulwdnq1c" path="res://control.gd" id="1_0fbet"]
+[ext_resource type="Texture2D" uid="uid://6q6ejxxw6ft6" path="res://sanity_1.png" id="2_62e2m"]
 
 [node name="Control" type="Control" unique_id=1310427511]
 layout_mode = 3
@@ -24,3 +25,19 @@ grow_vertical = 2
 value = 100.0
 fill_mode = 3
 show_percentage = false
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=579595964]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 660.0
+offset_right = 575.0
+offset_bottom = 804.0
+scale = Vector2(0.12288144, 0.4753147)
+texture = ExtResource("2_62e2m")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1936070221]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 167.0
+offset_right = 134.0
+offset_bottom = 207.0
