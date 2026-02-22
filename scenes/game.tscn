@@ -38,4 +38,5 @@ offset_bottom = 6.0
 position = Vector2(5296, 2020)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1236499846]
+visible = false
 color = Color(0, 0, 0, 1)

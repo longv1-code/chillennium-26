@@ -8,7 +8,7 @@ size = Vector2(36, 44)
 
 [node name="Collectable_item" type="StaticBody2D" unique_id=781395988 groups=["items"]]
 script = ExtResource("1_djodh")
-item_name = "medal"
+item_name = "from high school?"
 item_texture = ExtResource("2_djodh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1764654972]
