@@ -1,8 +1,6 @@
 extends Control
 
 @onready var bar = $SanityBar
-@onready var housing_1 = $TextureRect
-@onready var housing_2 = $TextureRect2
 
 # load housing
 var h1_tex_1 = preload("res://sanity_bar_stages/sanitybar_1b.png")
