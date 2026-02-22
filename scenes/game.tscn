@@ -3,25 +3,21 @@
 [ext_resource type="PackedScene" uid="uid://cv6egniu8glmy" path="res://sanitybar.tscn" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://8taesmmsmvrb" path="res://qteui.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://rhj4rey25cka" path="res://player.tscn" id="3_iywne"]
-[ext_resource type="PackedScene" uid="uid://dhwe0e6bpik2p" path="res://health_ui.tscn" id="3_p57ef"]
-[ext_resource type="Texture2D" uid="uid://dhxkvdiv66cut" path="res://main_player.png" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://dhwe0e6bpik2p" path="res://health_ui.tscn" id="4_p57ef"]
+[ext_resource type="Texture2D" uid="uid://dhxkvdiv66cut" path="res://main_player.png" id="5_lbhrr"]
 
 [sub_resource type="GDScript" id="GDScript_80nbo"]
 script/source = "extends Node2D
-
 @onready var player = $Player
 @onready var qte_ui = $UI/QTEUI
-
 func _ready():
 	print(qte_ui)
 	player.qte_triggered.connect(qte_ui.start_qte)
 	qte_ui.qte_success.connect(_on_qte_success)
 	qte_ui.qte_fail.connect(_on_qte_fail)
-
 func _on_qte_success(enemy):
 	enemy.queue_free()
 	player.qte_active = false
-
 func _on_qte_fail():
 	player.take_damage()
 	player.qte_active = false
@@ -48,7 +44,7 @@ offset_top = -96.0
 offset_right = 663.0
 offset_bottom = -96.0
 
-[node name="HealthUI" parent="UI" unique_id=2111925015 instance=ExtResource("3_p57ef")]
+[node name="HealthUI" parent="UI" unique_id=2111925015 instance=ExtResource("4_p57ef")]
 
 [node name="Player" parent="." unique_id=826294922 instance=ExtResource("3_iywne")]
 position = Vector2(320, 180)
@@ -56,4 +52,4 @@ position = Vector2(320, 180)
 [node name="MainPlayer" type="Sprite2D" parent="." unique_id=102409634]
 position = Vector2(253, 186)
 scale = Vector2(0.2125, 0.2875)
-texture = ExtResource("4_lbhrr")
+texture = ExtResource("5_lbhrr")
