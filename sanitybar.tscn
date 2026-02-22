@@ -1,32 +1,69 @@
 [gd_scene format=3 uid="uid://cv6egniu8glmy"]
 
 [ext_resource type="Script" uid="uid://celftulwdnq1c" path="res://sanitybar.gd" id="1_0fbet"]
+[ext_resource type="Texture2D" uid="uid://b0i0q2t7f0xy1" path="res://sanity_bar_stages/sanitybar_1b.png" id="2_rxdkn"]
+[ext_resource type="Texture2D" uid="uid://g4jslkfld5bv" path="res://sanity_bar_stages/sanitybar_1f.png" id="3_fc64e"]
+
+[sub_resource type="Gradient" id="Gradient_rxdkn"]
+colors = PackedColorArray(0.8627451, 0.32156864, 0.09019608, 1, 0.8391421, 0.61461526, 0.34620142, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fc64e"]
+gradient = SubResource("Gradient_rxdkn")
+width = 24
+height = 269
+fill_from = Vector2(0.5321101, 1)
+fill_to = Vector2(0.5825688, 0.036697246)
 
 [node name="SanityBar" type="Control" unique_id=1310427511]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -10.0
-offset_bottom = -25.0
+offset_left = -2.0
+offset_top = 2.0
+offset_right = -12.0
+offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0fbet")
 
-[node name="SanityBar" type="ProgressBar" parent="." unique_id=648404328]
+[node name="SanityBar" type="TextureProgressBar" parent="." unique_id=668317020]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-
-offset_left = 25.0
-offset_top = -145.0
-offset_right = 43.0
-offset_bottom = 136.0
-
+offset_left = -630.0
+offset_top = 41.5
+offset_right = -486.0
+offset_bottom = 401.5
+grow_horizontal = 2
 grow_vertical = 2
+step = 0.01
 value = 100.0
 fill_mode = 3
-show_percentage = false
+texture_under = ExtResource("2_rxdkn")
+texture_over = ExtResource("3_fc64e")
+texture_progress = SubResource("GradientTexture2D_fc64e")
+texture_progress_offset = Vector2(60.725, 49.71)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1014496159]
+visible = false
+z_index = -1
+layout_mode = 0
+offset_left = 7.0
+offset_top = 379.0
+offset_right = 151.0
+offset_bottom = 739.0
+texture = ExtResource("2_rxdkn")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1224827568]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 7.0
+offset_top = 382.0
+offset_right = 151.0
+offset_bottom = 742.0
+texture = ExtResource("3_fc64e")

@@ -1,6 +1,18 @@
 extends Control
 
 @onready var bar = $SanityBar
+@onready var housing_1 = $TextureRect
+@onready var housing_2 = $TextureRect2
+
+# load housing
+var h1_tex_1 = preload("res://sanity_bar_stages/sanitybar_1b.png")
+var h2_tex_1 = preload("res://sanity_bar_stages/sanitybar_1f.png")
+var h1_tex_2 = preload("res://sanity_bar_stages/sanitybar_2b.png")
+var h2_tex_2 = preload("res://sanity_bar_stages/sanitybar_2f.png")
+var h1_tex_3 = preload("res://sanity_bar_stages/sanitybar_3b.png")
+var h2_tex_3 = preload("res://sanity_bar_stages/sanitybar_3f.png")
+var h1_tex_4 = preload("res://sanity_bar_stages/sanitybar_4b.png")
+var h2_tex_4 = preload("res://sanity_bar_stages/sanitybar_4f.png")
 #var g_delta = 
 
 var timer := 400.0 # timer in seconds for sanity bar to ensure completion
@@ -48,35 +60,50 @@ func check_stages(): # triggers stages
 	if percent <= stage_1_max_value and not triggered_stage_1:
 		triggered_stage_1 = true
 		curr_drain_mult = 1
+		bar.texture_under = h1_tex_1
+		bar.texture_over = h2_tex_1
 		#curr_state = 1
 		print("Stage 1 Started")
 	elif percent <= stage_2_max_value and not triggered_stage_2:
 		triggered_stage_2 = true
 		max_value = stage_2_max_value
 		curr_drain_mult = 3
+		bar.texture_under = h1_tex_2
+		bar.texture_over = h2_tex_2
 		#curr_state = 2
 		print("Stage 2 Started")
 	elif percent <= stage_3_max_value and not triggered_stage_3:
 		triggered_stage_3 = true
 		max_value = stage_3_max_value
 		curr_drain_mult = 3
+		bar.texture_under = h1_tex_3
+		bar.texture_over = h2_tex_3
 		#curr_state = 3
 		print("Stage 3 Started")
 	elif percent <= stage_4_max_value and not triggered_stage_4:
 		triggered_stage_4 = true
 		max_value = stage_4_max_value
 		curr_drain_mult = 1
+		bar.texture_under = h1_tex_4
+		bar.texture_over = h2_tex_4
 		#curr_state = 4
 		print("Stage 4 Started")		
 
 func stage_1():
 	print("stage 1")
+	# Update the Bar
+	
+	# Update the Housing
+	
 func stage_2():
 	print("stage 2")
+	
 func stage_3():
 	print("print 3")
+	
 func stage_4():
 	print("4")
+	
 	
 func _input(event):
 	# Check if a key was pressed, specifically the 'F' key
