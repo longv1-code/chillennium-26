@@ -20,18 +20,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-<<<<<<< HEAD:sanitybar.tscn
-offset_left = -6.5
-offset_top = -50.0
-offset_right = 6.5
-offset_bottom = 50.0
-grow_horizontal = 2
-=======
+
 offset_left = 25.0
 offset_top = -145.0
 offset_right = 43.0
 offset_bottom = 136.0
->>>>>>> feature/map-system:control.tscn
+
 grow_vertical = 2
 value = 100.0
 fill_mode = 3
