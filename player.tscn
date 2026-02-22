@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ctc6a20gab0xo"]
+
+[ext_resource type="Script" uid="uid://byihvn1bnee8r" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="PackedScene" uid="uid://3u1j4qe6ad7h" path="res://health_ui.tscn" id="2_onrkg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i3pqv"]
+radius = 100.005
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4flbx"]
+radius = 37.0
+
+[node name="Player" type="CharacterBody2D" unique_id=826294922]
+script = ExtResource("1_4flbx")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=518159967]
+
+[node name="HealthUI" parent="UI" unique_id=2111925015 instance=ExtResource("2_onrkg")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1647845844]
+shape = SubResource("CapsuleShape2D_onrkg")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=98532339]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1489854229]
+shape = SubResource("CircleShape2D_i3pqv")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=474102073]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=948666137]
+shape = SubResource("CircleShape2D_4flbx")
+
+[node name="item_placeholder" type="Node2D" parent="." unique_id=1454530630 groups=["items"]]
+
+[node name="enemy_placeholder" type="Node2D" parent="." unique_id=709613390 groups=["enemies"]]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=847547968]
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]
