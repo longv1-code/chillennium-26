@@ -545,3 +545,6 @@ occluder = SubResource("OccluderPolygon2D_yvyqi")
 
 [node name="LightOccluder2D9" type="LightOccluder2D" parent="dungeon_ItemSpawner/Occlusion_layers" unique_id=290022274]
 occluder = SubResource("OccluderPolygon2D_x0bbq")
+
+[node name="monster_goblin" parent="." unique_id=1629275517 instance=ExtResource("13_ksy26")]
+position = Vector2(-1079.4205, 1129.6819)

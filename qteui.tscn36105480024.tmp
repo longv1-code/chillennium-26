@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://8taesmmsmvrb"]
 
 [ext_resource type="Script" uid="uid://bay8578s5g4dh" path="res://qteui.gd" id="1_qxgab"]
-[ext_resource type="Texture2D" uid="uid://buhnk5jxqr3uu" path="res://full_heart.png" id="2_t4wb5"]
+[ext_resource type="Texture2D" uid="uid://cm570rkn3o38a" path="res://approach_heart.png" id="2_t4wb5"]
 [ext_resource type="Texture2D" uid="uid://bjt3em7rigpye" path="res://hit_heart.png" id="3_snt35"]
 [ext_resource type="Texture2D" uid="uid://2qmcjgiwa1ca" path="res://qte_bar.png" id="4_t4wb5"]
 
@@ -30,20 +30,20 @@ grow_vertical = 2
 
 [node name="ApproachHeart" type="TextureRect" parent="QTEContainer" unique_id=489091701]
 layout_mode = 0
-offset_left = 108.5
-offset_top = 54.0
-offset_right = 243.5
-offset_bottom = 189.0
-texture = ExtResource("3_snt35")
+offset_left = 151.5
+offset_top = 100.0
+offset_right = 194.5
+offset_bottom = 143.0
+texture = ExtResource("2_t4wb5")
 expand_mode = 1
 
 [node name="HitHeart" type="TextureRect" parent="QTEContainer" unique_id=2122756493]
 layout_mode = 0
-offset_left = 147.5
-offset_top = 93.0
-offset_right = 204.5
-offset_bottom = 150.0
-texture = ExtResource("2_t4wb5")
+offset_left = 135.5
+offset_top = 84.0
+offset_right = 210.5
+offset_bottom = 159.0
+texture = ExtResource("3_snt35")
 expand_mode = 1
 
 [node name="SpamBar" type="Control" parent="QTEContainer" unique_id=1241776379]
