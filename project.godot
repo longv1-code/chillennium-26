@@ -72,3 +72,4 @@ escape={
 
 rendering_device/driver.windows="d3d12"
 environment/defaults/default_clear_color=Color(0.32544088, 0.3254409, 0.32544088, 1)
+<<<<<<<Updatedupstreamenvironment/defaults/default_clear_color=Color(0.38928655, 0.38928664, 0.3892865, 1)

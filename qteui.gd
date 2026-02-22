@@ -93,10 +93,12 @@ func process_timing(delta):
 			qte_success.emit(target)
 		else:
 			qte_fail.emit()
+			print("qte_fail emitted")
 		stop_qte()
 		return
 	if time_left <= 0:
 		qte_fail.emit()
+		print("qte_fail emitted")
 		stop_qte()
 # Spam QTE
 func process_spam(delta):
@@ -116,6 +118,7 @@ func process_spam(delta):
 	# Fail: filled completely
 	if spam_fill >= 1.0:
 		qte_fail.emit()
+		print("qte_fail emitted")
 		stop_qte()
 		return
 # Stop / Reset QTE

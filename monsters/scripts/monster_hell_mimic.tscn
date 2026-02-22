@@ -5,18 +5,19 @@
 [ext_resource type="Texture2D" uid="uid://ccne1v0dflx1h" path="res://monsters/images/monster_hellmimi_latch.png" id="3_vvgxs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m0elv"]
-radius = 208.29066
+radius = 91.13726
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uls2k"]
 radius = 781.0314
 
-[node name="monster_hell_mimic" type="CharacterBody2D" unique_id=1629275517]
+[node name="monster_hell_mimic" type="CharacterBody2D" unique_id=1629275517 groups=["enemies"]]
 script = ExtResource("1_grkjq")
 qte_type = "spam"
 lunge_texture = ExtResource("2_y5qjl")
 latched_texture = ExtResource("3_vvgxs")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=729579495]
+scale = Vector2(0.47, 0.47)
 texture = ExtResource("2_y5qjl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=674185390]
@@ -28,3 +29,5 @@ visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=387412601]
 shape = SubResource("CircleShape2D_uls2k")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]

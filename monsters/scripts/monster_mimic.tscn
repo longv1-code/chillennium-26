@@ -10,7 +10,7 @@ radius = 68.0294
 [sub_resource type="CircleShape2D" id="CircleShape2D_uls2k"]
 radius = 781.0314
 
-[node name="monster_mimic" type="CharacterBody2D" unique_id=1629275517]
+[node name="monster_mimic" type="CharacterBody2D" unique_id=1629275517 groups=["enemies"]]
 script = ExtResource("1_ay65x")
 lunge_texture = ExtResource("2_t3amq")
 latched_texture = ExtResource("3_fy5e0")
@@ -27,3 +27,5 @@ visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=387412601]
 shape = SubResource("CircleShape2D_uls2k")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]

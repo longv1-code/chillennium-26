@@ -51,12 +51,17 @@ func _on_qte_success(enemy):
 		enemy.queue_free()
 	player.qte_active = false
 	player.set_physics_process(true)
+	player.get_node("AnimatedSprite2D").show()
 
 func _on_qte_fail():
 	print("QTE Failed!")
-	player.take_damage()
+	health_ui.set_hearts(health_ui.current_health - 1)
+	if player.qte_target:
+		player.qte_target.queue_free()
+	player.qte_target = null
 	player.qte_active = false
 	player.set_physics_process(true)
+	player.get_node("AnimatedSprite2D").show()
 
 func _on_map_changed(map_num: int):
 	if map_num == 1:

@@ -5,18 +5,19 @@
 [ext_resource type="Texture2D" uid="uid://61vrebordva0" path="res://monsters/images/monster_hellghos_latch.png" id="3_l0j3c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m0elv"]
-radius = 269.04648
+radius = 60.133186
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uls2k"]
 radius = 781.0314
 
-[node name="monster_hell_ghost" type="CharacterBody2D" unique_id=1629275517]
+[node name="monster_hell_ghost" type="CharacterBody2D" unique_id=1629275517 groups=["enemies"]]
 script = ExtResource("1_h1vcr")
 qte_type = "spam"
 lunge_texture = ExtResource("2_ie5p1")
 latched_texture = ExtResource("3_l0j3c")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=729579495]
+scale = Vector2(0.47, 0.47)
 texture = ExtResource("2_ie5p1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=674185390]
@@ -28,3 +29,5 @@ visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=387412601]
 shape = SubResource("CircleShape2D_uls2k")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]

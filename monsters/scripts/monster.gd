@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 enum State {LUNGE, LATCHED}
 
-@export var lunge_speed: float = 400.0
+@export var lunge_speed: float = 1500.0
 @export var qte_type: String = "timing"
 @export var lunge_texture: Texture2D
 @export var latched_texture: Texture2D
@@ -20,16 +20,16 @@ func _physics_process(delta: float) -> void:
 	match state:
 		State.LUNGE:
 			if player:
+				lunge_direction = (player.global_position - global_position).normalized()
 				velocity = lunge_direction * lunge_speed
 				move_and_slide()
-				# detect collision with player after slide
-				for i in get_slide_collision_count():
-					var collision = get_slide_collision(i)
-					if collision.get_collider() == player:
-						latch_on()
+			for i in get_slide_collision_count():
+				var collision = get_slide_collision(i)
+				if collision.get_collider() == player:
+					latch_on()
 						
 		State.LATCHED:
-			if player:
+			if is_instance_valid(player):
 				global_position = player.global_position
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
@@ -44,4 +44,5 @@ func latch_on():
 	velocity = Vector2.ZERO
 	if player.has_method("on_enemy_latched"):
 		player.set_physics_process(false)
+		player.get_node("AnimatedSprite2D").hide()
 		player.on_enemy_latched(self, qte_type)

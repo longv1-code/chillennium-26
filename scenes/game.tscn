@@ -5,9 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://8taesmmsmvrb" path="res://qteui.tscn" id="3_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bthdv30137x3d" path="res://player.tscn" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://dhwe0e6bpik2p" path="res://health_ui.tscn" id="5_p57ef"]
-[ext_resource type="PackedScene" uid="uid://xs3ol0fn3bx0" path="res://scenes/dungeon_tm.tscn" id="6_dung"]
-[ext_resource type="PackedScene" uid="uid://b2h0c78phty1l" path="res://scenes/evil_tm.tscn" id="7_evil"]
-[ext_resource type="PackedScene" uid="uid://bhjplh824aqru" path="res://scenes/floating_text.tscn" id="8_0tnpc"]
 
 [node name="Game" type="Node2D" unique_id=95656525]
 script = ExtResource("1_game")
@@ -26,10 +23,10 @@ grow_horizontal = 1
 grow_vertical = 0
 
 [node name="QTEUI" parent="UI" unique_id=1385992707 instance=ExtResource("3_lbhrr")]
-offset_left = 663.0
-offset_top = -96.0
-offset_right = 663.0
-offset_bottom = -96.0
+offset_left = 43.0
+offset_top = -11.0
+offset_right = 43.0
+offset_bottom = -11.0
 
 [node name="HealthUI" parent="UI" unique_id=2111925015 instance=ExtResource("5_p57ef")]
 offset_left = 31.0
