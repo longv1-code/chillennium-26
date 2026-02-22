@@ -2,6 +2,9 @@ extends Control
 
 @onready var bar = $SanityBar
 
+# signal map changes
+signal map_changed(map_num)
+
 # load housing
 var h1_tex_1 = preload("res://sanity_bar_stages/sanitybar_1b.png")
 var h2_tex_1 = preload("res://sanity_bar_stages/sanitybar_1f.png")
@@ -61,6 +64,7 @@ func check_stages(): # triggers stages
 		bar.texture_under = h1_tex_1
 		bar.texture_over = h2_tex_1
 		#curr_state = 1
+		map_changed.emit(1)
 		print("Stage 1 Started")
 	elif percent <= stage_2_max_value and not triggered_stage_2:
 		triggered_stage_2 = true
@@ -69,6 +73,7 @@ func check_stages(): # triggers stages
 		bar.texture_under = h1_tex_2
 		bar.texture_over = h2_tex_2
 		#curr_state = 2
+		map_changed.emit(2)
 		print("Stage 2 Started")
 	elif percent <= stage_3_max_value and not triggered_stage_3:
 		triggered_stage_3 = true
@@ -77,6 +82,7 @@ func check_stages(): # triggers stages
 		bar.texture_under = h1_tex_3
 		bar.texture_over = h2_tex_3
 		#curr_state = 3
+		map_changed.emit(3)
 		print("Stage 3 Started")
 	elif percent <= stage_4_max_value and not triggered_stage_4:
 		triggered_stage_4 = true
@@ -85,7 +91,8 @@ func check_stages(): # triggers stages
 		bar.texture_under = h1_tex_4
 		bar.texture_over = h2_tex_4
 		#curr_state = 4
-		print("Stage 4 Started")		
+		map_changed.emit(4)
+		print("Stage 4 Started")
 
 func stage_1():
 	print("stage 1")

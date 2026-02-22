@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://byihvn1bnee8r" path="res://player.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://dbu1402yh15tv" path="res://light.png" id="3_hqtel"]
+[ext_resource type="Script" uid="uid://cm6hnsmw5of5p" path="res://point_light_2d.gd" id="3_sweqy"]
 [ext_resource type="Texture2D" uid="uid://c1t61u6vrbvob" path="res://main_char_anim.png" id="5_sweqy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
@@ -241,6 +242,7 @@ color = Color(0.9081717, 0.697305, 0.34798276, 1)
 energy = 1.05
 shadow_enabled = true
 texture = ExtResource("3_hqtel")
+script = ExtResource("3_sweqy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1797708228]
 position = Vector2(-0.14839172, 1.1691284)

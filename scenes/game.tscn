@@ -1,32 +1,13 @@
 [gd_scene format=3 uid="uid://sneowpihj7ic"]
 
-[ext_resource type="PackedScene" uid="uid://d2piwlp1ejsuk" path="res://scenes/void_tm.tscn" id="1_iywne"]
 [ext_resource type="PackedScene" uid="uid://cv6egniu8glmy" path="res://sanitybar.tscn" id="1_lnu2h"]
+[ext_resource type="Script" uid="uid://hi6ak4hbhenp" path="res://scenes/game.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://8taesmmsmvrb" path="res://qteui.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bthdv30137x3d" path="res://player.tscn" id="3_iywne"]
 [ext_resource type="PackedScene" uid="uid://dhwe0e6bpik2p" path="res://health_ui.tscn" id="4_p57ef"]
 
-[sub_resource type="GDScript" id="GDScript_80nbo"]
-script/source = "extends Node2D
-@onready var player = $Player
-@onready var qte_ui = $UI/QTEUI
-func _ready():
-	print(qte_ui)
-	player.qte_triggered.connect(qte_ui.start_qte)
-	qte_ui.qte_success.connect(_on_qte_success)
-	qte_ui.qte_fail.connect(_on_qte_fail)
-func _on_qte_success(enemy):
-	enemy.queue_free()
-	player.qte_active = false
-func _on_qte_fail():
-	player.take_damage()
-	player.qte_active = false
-"
-
 [node name="Game" type="Node2D" unique_id=95656525]
-script = SubResource("GDScript_80nbo")
-
-[node name="void_tm" parent="." unique_id=964716213 instance=ExtResource("1_iywne")]
+script = ExtResource("1_p57ef")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1775418828]
 
@@ -54,8 +35,7 @@ offset_right = 31.0
 offset_bottom = 6.0
 
 [node name="Player" parent="." unique_id=826294922 instance=ExtResource("3_iywne")]
-position = Vector2(3335, -134)
+position = Vector2(5296, 2020)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1236499846]
-visible = false
 color = Color(0, 0, 0, 1)

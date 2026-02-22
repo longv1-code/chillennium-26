@@ -42,7 +42,7 @@ func _on_interaction_area_body_exited(body: Node2D) -> void:
 		nearby_item = null
 		print("Item left: ", body.name)
 
-func _input(event):
+func _unhandled_input(event):
 	if event.is_action_pressed("interact") and nearby_item: # interact with item
 		print("Interacted with: ", nearby_item.name)
 		

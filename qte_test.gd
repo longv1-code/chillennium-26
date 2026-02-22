@@ -7,7 +7,7 @@ func _ready():
 	qte_ui.qte_success.connect(_on_qte_success)
 	qte_ui.qte_fail.connect(_on_qte_fail)
 
-func _input(event):
+func _unhandled_input(event):
 	if event.is_action_pressed("qte_action"):
 		print("Pressed space for testing!")
 
