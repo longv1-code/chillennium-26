@@ -18,7 +18,12 @@ func _ready():
 func set_hearts(value: int): # sets amount of hearts
 	current_health = clamp(value, 0, max_health)
 	update_hearts()
-	
-func update_hearts(): # makes current hearts visible
+
+# Called when Player health changes
+func set_health(value: int) -> void:
+	current_health = clamp(value, 0, max_health)
+	update_hearts()
+
+func update_hearts() -> void:
 	for i in range(max_health):
 		hearts[i].texture = full_heart if i < current_health else empty_heart

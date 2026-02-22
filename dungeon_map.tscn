@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cd0seb8s5eluc"]
+
+[node name="DungeonMap" type="Node2D" unique_id=1330821703]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1106979121]
+format = 2
+
+[node name="Enemies" type="Node2D" parent="." unique_id=532809637]
+
+[node name="ItemSpawns" type="Node2D" parent="." unique_id=886022196]
