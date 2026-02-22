@@ -9,11 +9,13 @@ var health = 3
 var qte_active: bool = false
 var qte_target: Node = null
 
+# movement
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction * speed * delta
 	move_and_slide()
-	
+
+# item interaction
 func _on_interaction_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("items"): # detects nearby items
 		nearby_item = body
@@ -30,13 +32,14 @@ func _input(event):
 		nearby_item.queue_free()
 		nearby_item = null
 
+# monster interaction
 func take_damage(): # take 1 damage from monster
 	print("Player damaged")
 	health -= 1
 	health_ui.set_health(health)
 signal qte_triggered(enemy)
 
-func _on_detection_area_body_entered(body: Node2D) -> void:
+func _on_detection_area_body_entered(body: Node2D) -> void: # if monster is within radius to trigger QTE
 	if body.is_in_group("enemies") and not qte_active:
 		qte_active = true
 		qte_target = body

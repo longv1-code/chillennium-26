@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dhwe0e6bpik2p"]
 
-[ext_resource type="Script" path="res://health_ui.gd" id="1_tt5l4"]
+[ext_resource type="Script" uid="uid://ckn2p2lcwwt6d" path="res://health_ui.gd" id="1_tt5l4"]
+[ext_resource type="Texture2D" uid="uid://ni7diy68044w" path="res://heart.png" id="2_iy3an"]
 
 [node name="HealthUI" type="Control" unique_id=2111925015]
 layout_mode = 3
@@ -14,10 +15,22 @@ offset_right = 158.0
 offset_bottom = 70.0
 
 [node name="Heart1" type="TextureRect" parent="HBoxContainer" unique_id=1585528174]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+texture = ExtResource("2_iy3an")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="Heart2" type="TextureRect" parent="HBoxContainer" unique_id=1711671000]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+texture = ExtResource("2_iy3an")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="Heart3" type="TextureRect" parent="HBoxContainer" unique_id=815134533]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+texture = ExtResource("2_iy3an")
+expand_mode = 1
+stretch_mode = 4

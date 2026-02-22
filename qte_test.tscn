@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://byp1t3ytasov1"]
+
+[ext_resource type="PackedScene" uid="uid://8taesmmsmvrb" path="res://qteui.tscn" id="1_kf2lh"]
+[ext_resource type="Script" uid="uid://ci2jhgpjeynd4" path="res://qte_test.gd" id="1_qpoqp"]
+
+[node name="Node2D" type="Node2D" unique_id=309763529]
+script = ExtResource("1_qpoqp")
+
+[node name="QTEUI" parent="." unique_id=1385992707 instance=ExtResource("1_kf2lh")]
+
+[node name="TestEnemy" type="Node2D" parent="." unique_id=75338288]
+
+[node name="TestButton" type="Button" parent="." unique_id=196476006]
+offset_left = 8.0
+offset_top = 317.0
+offset_right = 74.0
+offset_bottom = 351.0
+text = "Test"
+
+[connection signal="pressed" from="TestButton" to="." method="_on_test_button_pressed"]

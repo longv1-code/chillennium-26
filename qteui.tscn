@@ -15,25 +15,17 @@ script = ExtResource("1_qxgab")
 
 [node name="QTEContainer" type="Control" parent="." unique_id=1925668446]
 layout_mode = 1
-anchors_preset = 0
-offset_right = 349.0
-offset_bottom = 226.0
-
-[node name="HitCircle" type="TextureRect" parent="QTEContainer" unique_id=1591211643]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 291.5
-offset_top = 151.5
-offset_right = 308.5
-offset_bottom = 168.5
+offset_left = -174.5
+offset_top = -113.0
+offset_right = 174.5
+offset_bottom = 113.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_sylqv")
-expand_mode = 1
 
 [node name="ApproachCircle" type="TextureRect" parent="QTEContainer" unique_id=2003307833]
 layout_mode = 1
@@ -42,11 +34,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 276.5
-offset_top = 137.0
-offset_right = 324.5
-offset_bottom = 185.0
+offset_left = -28.0
+offset_top = -19.0
+offset_right = 26.0
+offset_bottom = 35.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_t4wb5")
+expand_mode = 1
+
+[node name="HitCircle" type="TextureRect" parent="QTEContainer" unique_id=1591211643]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = -10.5
+offset_right = 16.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_sylqv")
 expand_mode = 1

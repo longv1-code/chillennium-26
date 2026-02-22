@@ -7,10 +7,10 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i3pqv"]
-radius = 100.005
+radius = 65.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4flbx"]
-radius = 37.0
+radius = 24.0
 
 [node name="Player" type="CharacterBody2D" unique_id=826294922]
 script = ExtResource("1_4flbx")
@@ -24,13 +24,11 @@ visible = false
 shape = SubResource("CapsuleShape2D_onrkg")
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=98532339]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1489854229]
 shape = SubResource("CircleShape2D_i3pqv")
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=474102073]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=948666137]
 shape = SubResource("CircleShape2D_4flbx")
