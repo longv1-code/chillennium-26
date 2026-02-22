@@ -2,12 +2,10 @@ extends Node2D
 
 @onready var player = $Player
 @onready var qte_ui = $UI/QTEUI
+@onready var health_ui = $UI/health_ui
 
 func _ready():
-	# player.qte_triggered.connect(func(enemy):
-		# qte_ui.start_qte(enemy, mode=0) # 0 = timing, 1 = spam
-	# )
-
+	player.qte_triggered.connect(qte_ui.start_qte)
 	qte_ui.qte_success.connect(_on_qte_success)
 	qte_ui.qte_fail.connect(_on_qte_fail)
 

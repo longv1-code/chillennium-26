@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cv6egniu8glmy" path="res://sanitybar.tscn" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://8taesmmsmvrb" path="res://qteui.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://rhj4rey25cka" path="res://player.tscn" id="3_iywne"]
+[ext_resource type="PackedScene" uid="uid://dhwe0e6bpik2p" path="res://health_ui.tscn" id="3_p57ef"]
 [ext_resource type="Texture2D" uid="uid://dhxkvdiv66cut" path="res://main_player.png" id="4_lbhrr"]
 
 [sub_resource type="GDScript" id="GDScript_80nbo"]
@@ -46,6 +47,8 @@ offset_left = 663.0
 offset_top = -96.0
 offset_right = 663.0
 offset_bottom = -96.0
+
+[node name="HealthUI" parent="UI" unique_id=2111925015 instance=ExtResource("3_p57ef")]
 
 [node name="Player" parent="." unique_id=826294922 instance=ExtResource("3_iywne")]
 position = Vector2(320, 180)
