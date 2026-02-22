@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="chillennium 26"
-run/main_scene="uid://ckn2f14n2rkfc"
+run/main_scene="uid://clyasn0g5qrv1"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
