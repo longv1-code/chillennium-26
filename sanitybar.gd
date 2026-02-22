@@ -23,7 +23,7 @@ const stage_3_max_value = 40
 const stage_4_max_value = 10
 var max_value = 100
 
-const base_dec_rate := .5
+var base_dec_rate := 0.5
 const dec_rate_increase := 5
 var curr_drain_mult := 1 
 
@@ -40,6 +40,8 @@ var triggered_stage_4 = false
 func _ready(): # sets the bar values first load
 	bar.max_value = max_value
 	bar.value = max_value
+	bar.min_value = 0.0
+	base_dec_rate = max_value / timer
 	
 func _process(delta): # continously run
 	check_stages()
@@ -63,52 +65,28 @@ func check_stages(): # triggers stages
 		curr_drain_mult = 1
 		bar.texture_under = h1_tex_1
 		bar.texture_over = h2_tex_1
-		#curr_state = 1
-		map_changed.emit(1)
 		print("Stage 1 Started")
 	elif percent <= stage_2_max_value and not triggered_stage_2:
 		triggered_stage_2 = true
-		max_value = stage_2_max_value
 		curr_drain_mult = 3
 		bar.texture_under = h1_tex_2
 		bar.texture_over = h2_tex_2
-		#curr_state = 2
 		map_changed.emit(2)
 		print("Stage 2 Started")
 	elif percent <= stage_3_max_value and not triggered_stage_3:
 		triggered_stage_3 = true
-		max_value = stage_3_max_value
 		curr_drain_mult = 3
 		bar.texture_under = h1_tex_3
 		bar.texture_over = h2_tex_3
-		#curr_state = 3
 		map_changed.emit(3)
 		print("Stage 3 Started")
 	elif percent <= stage_4_max_value and not triggered_stage_4:
 		triggered_stage_4 = true
-		max_value = stage_4_max_value
 		curr_drain_mult = 1
 		bar.texture_under = h1_tex_4
 		bar.texture_over = h2_tex_4
-		#curr_state = 4
 		map_changed.emit(4)
 		print("Stage 4 Started")
-
-func stage_1():
-	print("stage 1")
-	# Update the Bar
-	
-	# Update the Housing
-	
-func stage_2():
-	print("stage 2")
-	
-func stage_3():
-	print("print 3")
-	
-func stage_4():
-	print("4")
-	
 	
 func _input(event):
 	# Check if a key was pressed, specifically the 'F' key
