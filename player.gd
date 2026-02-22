@@ -48,8 +48,7 @@ func _unhandled_input(event):
 		
 		# Spawn the floating text
 		var text_instance = FLOATING_TEXT.instantiate()
-		text_instance.text = "+ " + nearby_item.item_name # Or whatever variable holds your item's name
-		text_instance.global_position = nearby_item.global_position 
+		text_instance.text = nearby_item.item_name
 		get_tree().current_scene.add_child(text_instance)
 		
 		nearby_item.queue_free()

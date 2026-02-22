@@ -5,7 +5,7 @@ func _ready():
 	var tween = create_tween()
 	
 	# Tell it to float UP 50 pixels over 1.0 second
-	tween.tween_property(self, "position", position - Vector2(0, 50), 1.0)
+	tween.tween_property(self, "position", position - Vector2(0, 100), 3.5)
 	
 	# At the exact same time (.parallel()), fade it out to invisible
 	tween.parallel().tween_property(self, "modulate:a", 0.0, 1.0)

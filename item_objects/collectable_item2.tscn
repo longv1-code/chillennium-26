@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cui5syu7hygcg"]
 
-[ext_resource type="Script" uid="uid://cfbv1y6b2fi5k" path="res://scenes/collectable_item.gd" id="1_qrju0"]
+[ext_resource type="Script" uid="uid://uoxxl4ddgeys" path="res://scenes/collectable_item.gd" id="1_qrju0"]
 [ext_resource type="Texture2D" uid="uid://bka4pxqwcbybu" path="res://collectabe_items/ItemOil.png" id="2_qrju0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t8v6b"]
@@ -8,7 +8,7 @@ size = Vector2(36, 44)
 
 [node name="Collectable_item" type="StaticBody2D" unique_id=781395988 groups=["items"]]
 script = ExtResource("1_qrju0")
-item_name = "collectable_oil"
+item_name = "This looks helpful..."
 item_texture = ExtResource("2_qrju0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1764654972]

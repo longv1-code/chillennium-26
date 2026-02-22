@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b1wk46bma5elb"]
 
-[ext_resource type="Script" uid="uid://cfbv1y6b2fi5k" path="res://scenes/collectable_item.gd" id="1_7u7jm"]
+[ext_resource type="Script" uid="uid://uoxxl4ddgeys" path="res://scenes/collectable_item.gd" id="1_7u7jm"]
 [ext_resource type="Texture2D" uid="uid://b58uffedxxmt8" path="res://collectabe_items/ItemGold.png" id="2_yg184"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t8v6b"]
@@ -8,6 +8,8 @@ size = Vector2(36, 44)
 
 [node name="Collectable_item" type="StaticBody2D" unique_id=781395988 groups=["items"]]
 script = ExtResource("1_7u7jm")
+item_name = "oo shiny"
+item_texture = ExtResource("2_yg184")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1764654972]
 position = Vector2(1, 0)

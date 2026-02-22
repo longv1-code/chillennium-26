@@ -9,7 +9,7 @@ var possible_items = [
 
 
 
-var max_items = 6
+var max_items = 5
 var safe_distance = 50.0 # The minimum pixel distance away from the player
 
 func _process(_delta: float) -> void:

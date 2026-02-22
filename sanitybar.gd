@@ -24,8 +24,8 @@ const stage_4_max_value = 10
 var max_value = 100
 
 var base_dec_rate := 0.5
-const dec_rate_increase := 5
-var curr_drain_mult := 1 
+const dec_rate_increase := .5
+var curr_drain_mult :float= 1.0
 
 const refill_amt := 2
 
@@ -48,7 +48,7 @@ func _process(delta): # continously run
 	drain_bar(delta)
 	
 func drain_bar(delta): # handles drain system
-	var total_drain = base_dec_rate * curr_drain_mult
+	var total_drain: float = base_dec_rate * curr_drain_mult
 	bar.value -= total_drain * delta
 	
 func collect_fuel():
@@ -68,14 +68,14 @@ func check_stages(): # triggers stages
 		print("Stage 1 Started")
 	elif percent <= stage_2_max_value and not triggered_stage_2:
 		triggered_stage_2 = true
-		curr_drain_mult = 3
+		curr_drain_mult = 1
 		bar.texture_under = h1_tex_2
 		bar.texture_over = h2_tex_2
 		map_changed.emit(2)
 		print("Stage 2 Started")
 	elif percent <= stage_3_max_value and not triggered_stage_3:
 		triggered_stage_3 = true
-		curr_drain_mult = 3
+		curr_drain_mult = 1
 		bar.texture_under = h1_tex_3
 		bar.texture_over = h2_tex_3
 		map_changed.emit(3)
