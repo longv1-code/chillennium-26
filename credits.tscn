@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://b7qyueihtf5ms"]
+
+[node name="Credits" type="Control" unique_id=607191716]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=313719606]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0.1728327, 0.17283267, 0.17283267, 1)
+
+[node name="CreditsTitle" type="Label" parent="." unique_id=221542606]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -26.0
+offset_top = 72.0
+offset_right = 29.0
+offset_bottom = 95.0
+grow_horizontal = 2
+text = "Credits"
+
+[node name="2DPixelArtistTitle" type="Label" parent="." unique_id=603515332]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_top = 117.0
+offset_right = 57.0
+offset_bottom = 140.0
+grow_horizontal = 2
+text = "2D Pixal Artists"
+
+[node name="Lorenzo" type="Label" parent="." unique_id=2140671895]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -92.0
+offset_top = 142.0
+offset_right = 11.0
+offset_bottom = 165.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 12
+text = "Lorenzo"
+horizontal_alignment = 1
+
+[node name="Ben" type="Label" parent="." unique_id=1752019747]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -6.0
+offset_top = 142.0
+offset_right = 97.0
+offset_bottom = 165.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 12
+text = "Ben"
+horizontal_alignment = 1
+
+[node name="Programmer" type="Label" parent="." unique_id=162757739]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_top = 174.0
+offset_right = 52.0
+offset_bottom = 197.0
+grow_horizontal = 2
+text = "Programmers"
+
+[node name="Long" type="Label" parent="." unique_id=76228761]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -8.0
+offset_top = 204.0
+offset_right = 95.0
+offset_bottom = 227.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 12
+text = "Long"
+horizontal_alignment = 1
+
+[node name="Miguel" type="Label" parent="." unique_id=169938746]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -92.0
+offset_top = 204.0
+offset_right = 11.0
+offset_bottom = 227.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 12
+text = "Miguel"
+horizontal_alignment = 1

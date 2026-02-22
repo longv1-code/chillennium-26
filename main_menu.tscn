@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://clyasn0g5qrv1"]
+
+[ext_resource type="Script" uid="uid://bao56dpkydq7l" path="res://main_menu.gd" id="1_06t4h"]
+
+[node name="MainMenu" type="Control" unique_id=1831115001]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
+script = ExtResource("1_06t4h")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1721865118]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0.641194, 0.4967416, 0.37319317, 1)
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1937380573]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -122.5
+offset_top = 123.0
+offset_right = 122.5
+offset_bottom = 157.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "<Insert Game Name>"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="." unique_id=1775465109]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.161285
+offset_top = -16.0
+offset_right = 43.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "Start"
+
+[node name="CreditButton" type="Button" parent="." unique_id=177092494]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = 21.0
+offset_right = 42.838715
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "Credits"
