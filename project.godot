@@ -11,13 +11,16 @@ config_version=5
 [application]
 
 config/name="chillennium 26"
+run/main_scene="uid://ckn2f14n2rkfc"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=640
-window/size/viewport_height=360
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=1280
+window/size/window_height_override=720
 
 [input]
 
@@ -59,3 +62,4 @@ qte_action={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0.37413925, 0.37413928, 0.37413922, 1)
