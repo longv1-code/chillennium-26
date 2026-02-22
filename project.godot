@@ -22,6 +22,11 @@ window/size/viewport_height=360
 window/size/viewport_width=640
 window/size/viewport_height=360
 
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+
 [input]
 
 move_left={

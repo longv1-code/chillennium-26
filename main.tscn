@@ -1,25 +1,19 @@
-[gd_scene format=3 uid="uid://4pkk3c1yeq43"]
+[gd_scene format=3 uid="uid://cv26qnvverqdp"]
 
-[ext_resource type="PackedScene" uid="uid://dnhab6fsmfg3e" path="res://control.tscn" id="1_ig7tw"]
-[ext_resource type="Texture2D" uid="uid://dhxkvdiv66cut" path="res://main_player.png" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cv6egniu8glmy" path="res://sanitybar.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://rhj4rey25cka" path="res://player.tscn" id="2_0xm2m"]
 
 [node name="Main" type="Node2D" unique_id=1064460986]
 
-[node name="Control" parent="." unique_id=1310427511 instance=ExtResource("1_ig7tw")]
-anchors_preset = 8
-anchor_left = 0.5
+[node name="SanityBar" parent="." unique_id=1310427511 instance=ExtResource("1_ig7tw")]
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 0.0
 anchor_bottom = 0.5
-offset_left = 13.000002
-offset_top = 141.0
-offset_right = 23.000002
-offset_bottom = 141.0
-scale = Vector2(0.9855258, 1.3339554)
-size_flags_horizontal = 4
-size_flags_vertical = 4
+offset_left = 18.0
+offset_top = 177.0
+offset_right = 18.0
+offset_bottom = 177.0
+grow_horizontal = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=942763777]
-position = Vector2(292, 168)
-scale = Vector2(0.32499996, 0.32499996)
-texture = ExtResource("2_0xm2m")
+[node name="Player" parent="." unique_id=826294922 instance=ExtResource("2_0xm2m")]

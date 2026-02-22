@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://3u1j4qe6ad7h"]
+[gd_scene format=3 uid="uid://dhwe0e6bpik2p"]
 
-[ext_resource type="Script" uid="uid://ckn2p2lcwwt6d" path="res://health_ui.gd" id="1_tt5l4"]
+[ext_resource type="Script" path="res://health_ui.gd" id="1_tt5l4"]
 
 [node name="HealthUI" type="Control" unique_id=2111925015]
 layout_mode = 3
@@ -9,7 +9,8 @@ script = ExtResource("1_tt5l4")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=702220109]
 layout_mode = 0
-offset_right = 157.0
+offset_left = 1.0
+offset_right = 158.0
 offset_bottom = 70.0
 
 [node name="Heart1" type="TextureRect" parent="HBoxContainer" unique_id=1585528174]

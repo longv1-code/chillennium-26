@@ -44,7 +44,7 @@ func collect_fuel():
 
 func check_stages(): # triggers stages
 	var percent: float = (bar.value / max_value) * 100.0
-	
+
 	if percent <= stage_1_max_value and not triggered_stage_1:
 		triggered_stage_1 = true
 		curr_drain_mult = 1

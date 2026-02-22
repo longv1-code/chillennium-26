@@ -1,7 +1,8 @@
-[gd_scene format=3 uid="uid://ctc6a20gab0xo"]
+[gd_scene format=3 uid="uid://rhj4rey25cka"]
 
 [ext_resource type="Script" uid="uid://byihvn1bnee8r" path="res://player.gd" id="1_4flbx"]
-[ext_resource type="PackedScene" uid="uid://3u1j4qe6ad7h" path="res://health_ui.tscn" id="2_onrkg"]
+[ext_resource type="PackedScene" uid="uid://dhwe0e6bpik2p" path="res://health_ui.tscn" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://dhxkvdiv66cut" path="res://main_player.png" id="3_i3pqv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
 
@@ -36,6 +37,10 @@ shape = SubResource("CircleShape2D_4flbx")
 [node name="enemy_placeholder" type="Node2D" parent="." unique_id=709613390 groups=["enemies"]]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=847547968]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=721672538]
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("3_i3pqv")
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]

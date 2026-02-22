@@ -6,6 +6,9 @@ var speed: float = 600
 var nearby_item: Node = null 
 var health = 3
 
+var qte_active: bool = false
+var qte_target: Node = null
+
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var velocity = direction * speed
@@ -28,5 +31,13 @@ func _input(event):
 		nearby_item = null
 
 func take_damage(): # take 1 damage from monster
+	print("Player damaged")
 	health -= 1
 	health_ui.set_health(health)
+signal qte_triggered(enemy)
+
+func _on_detection_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("enemies") and not qte_active:
+		qte_active = true
+		qte_target = body
+		emit_signal("qte_triggered", body)
