@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="chillennium 26"
+run/main_scene="uid://d2iq535oi7c5h"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/window_width_override=640
+window/size/window_height_override=360
 
 [input]
 
