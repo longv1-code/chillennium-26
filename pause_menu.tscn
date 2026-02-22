@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dyen8ywgaf0vf"]
+
+[ext_resource type="Script" uid="uid://3patj83s8s3" path="res://pause_menu.gd" id="1_hdmo1"]
+[ext_resource type="Script" uid="uid://bc7da8dfh23da" path="res://resume_button.gd" id="2_nwcfo"]
+[ext_resource type="Script" uid="uid://cfwn41c0pisud" path="res://quit_button.gd" id="3_05uyy"]
+
+[node name="PauseMenu" type="Control" unique_id=257146570]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hdmo1")
+
+[node name="Background" type="ColorRect" parent="." unique_id=316490489]
+layout_mode = 1
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0.5764706, 0.5764706, 0.5764706, 0.08235294)
+
+[node name="PausedLabel" type="Label" parent="." unique_id=253964193]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.5
+offset_top = -92.0
+offset_right = 56.5
+offset_bottom = -47.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Paused"
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="." unique_id=1963906928]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = -29.0
+offset_right = 49.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Resume"
+script = ExtResource("2_nwcfo")
+
+[node name="QuitButton" type="Button" parent="." unique_id=1567463368]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = 15.0
+offset_right = 49.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+script = ExtResource("3_05uyy")
