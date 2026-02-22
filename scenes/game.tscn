@@ -34,7 +34,7 @@ offset_top = 6.0
 offset_right = 31.0
 offset_bottom = 6.0
 
-[node name="Player" parent="." unique_id=826294922 instance=ExtResource("3_iywne")]
+[node name="Player" parent="." unique_id=826294922 groups=["player"] instance=ExtResource("3_iywne")]
 position = Vector2(5296, 2020)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1236499846]

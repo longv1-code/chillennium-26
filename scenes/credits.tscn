@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b7qyueihtf5ms"]
 
 [ext_resource type="Script" uid="uid://chv1qr4bneevh" path="res://scenes/credits.gd" id="1_nm7lk"]
+[ext_resource type="Texture2D" uid="uid://jgysuer1acby" path="res://credits_menu.png" id="2_2ckv8"]
 
 [node name="Credits" type="Control" unique_id=607191716]
 layout_mode = 3
@@ -11,100 +12,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nm7lk")
 
-[node name="Background" type="ColorRect" parent="." unique_id=313719606]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1747296085]
 layout_mode = 0
-offset_right = 1281.0
-offset_bottom = 721.0
-color = Color(0.1728327, 0.17283267, 0.17283267, 1)
-
-[node name="CreditsTitle" type="Label" parent="." unique_id=221542606]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -26.0
-offset_top = 234.0
-offset_right = 29.0
-offset_bottom = 257.0
-grow_horizontal = 2
-text = "Credits"
-
-[node name="2DPixelArtistTitle" type="Label" parent="." unique_id=603515332]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -60.0
-offset_top = 279.0
-offset_right = 57.0
-offset_bottom = 302.0
-grow_horizontal = 2
-text = "2D Pixel Artists"
-
-[node name="Lorenzo" type="Label" parent="." unique_id=2140671895]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -92.0
-offset_top = 304.0
-offset_right = 11.0
-offset_bottom = 327.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 12
-text = "Lorenzo"
-horizontal_alignment = 1
-
-[node name="Ben" type="Label" parent="." unique_id=1752019747]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -6.0
-offset_top = 304.0
-offset_right = 97.0
-offset_bottom = 327.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 12
-text = "Ben"
-horizontal_alignment = 1
-
-[node name="Programmer" type="Label" parent="." unique_id=162757739]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -55.0
-offset_top = 336.0
-offset_right = 52.0
-offset_bottom = 359.0
-grow_horizontal = 2
-text = "Programmers"
-
-[node name="Long" type="Label" parent="." unique_id=76228761]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -8.0
-offset_top = 366.0
-offset_right = 95.0
-offset_bottom = 389.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 12
-text = "Long"
-horizontal_alignment = 1
-
-[node name="Miguel" type="Label" parent="." unique_id=169938746]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -92.0
-offset_top = 366.0
-offset_right = 11.0
-offset_bottom = 389.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 12
-text = "Miguel"
-horizontal_alignment = 1
+offset_right = 750.22217
+offset_bottom = 422.0
+scale = Vector2(1.706698, 1.706698)
+texture = ExtResource("2_2ckv8")
+expand_mode = 1
+stretch_mode = 4

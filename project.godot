@@ -20,6 +20,11 @@ config/icon="res://icon.svg"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 
+[global_group]
+
+enemies=""
+player=""
+
 [input]
 
 move_left={
@@ -65,5 +70,5 @@ escape={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)
-<<<<<<<Updatedupstreamenvironment/defaults/default_clear_color=Color(0.4045111, 0.40451115, 0.4045111, 1)
+environment/defaults/default_clear_color=Color(0.32544088, 0.3254409, 0.32544088, 1)
+<<<<<<<Updatedupstreamenvironment/defaults/default_clear_color=Color(0.38928655, 0.38928664, 0.3892865, 1)

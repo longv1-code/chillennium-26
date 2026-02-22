@@ -8,6 +8,7 @@ var qte_active: bool = false
 var qte_target: Node = null
 
 signal qte_triggered(enemy)
+signal qte_spam_triggered(enemy)
 
 @onready var anim = $AnimatedSprite2D
 
@@ -54,13 +55,17 @@ func _unhandled_input(event):
 		nearby_item.queue_free()
 		nearby_item = null
 
-func _on_detection_area_body_entered(body: Node2D) -> void:
-	if body.is_in_group("enemies") and not qte_active:
-		qte_active = true
-		qte_target = body
-		qte_triggered.emit(body)
-
 func _on_enemy_detection_area_body_exited(body: Node2D) -> void:
 	if body == qte_target and not qte_active:
 		qte_target = null
 		get_node("../CanvasLayer/Control").collect_fuel()
+
+func on_enemy_latched(enemy: Node, type: String): # monster collision
+	if qte_active:
+		return
+	qte_active = true
+	qte_target = enemy
+	if type == "timing":
+		qte_triggered.emit(enemy)
+	elif type == "spam":
+		qte_spam_triggered.emit(enemy)

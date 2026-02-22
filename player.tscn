@@ -210,19 +210,16 @@ scale = Vector2(6.738944, 6.84278)
 script = ExtResource("1_4flbx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1647845844]
-visible = false
 scale = Vector2(0.6948536, 0.6948536)
 shape = SubResource("CapsuleShape2D_onrkg")
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=98532339]
-visible = false
 scale = Vector2(0.6948536, 0.6948536)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1489854229]
 shape = SubResource("CircleShape2D_onrkg")
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=474102073]
-visible = false
 scale = Vector2(0.6948536, 0.6948536)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=948666137]

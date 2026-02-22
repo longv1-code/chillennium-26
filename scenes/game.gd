@@ -26,6 +26,7 @@ var spawn_positions = {
 
 func _ready():
 	player.qte_triggered.connect(qte_ui.start_qte)
+	player.qte_spam_triggered.connect(qte_ui.start_spam_qte)
 	qte_ui.qte_success.connect(_on_qte_success)
 	qte_ui.qte_fail.connect(_on_qte_fail)
 	sanity_bar.map_changed.connect(_on_map_changed)
@@ -49,11 +50,13 @@ func _on_qte_success(enemy):
 	if enemy:
 		enemy.queue_free()
 	player.qte_active = false
+	player.set_physics_process(true)
 
 func _on_qte_fail():
 	print("QTE Failed!")
 	player.take_damage()
 	player.qte_active = false
+	player.set_physics_process(true)
 
 func _on_map_changed(map_num: int):
 	if map_num == 1:

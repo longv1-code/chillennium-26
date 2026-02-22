@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bunsiege675kc"]
+
+[ext_resource type="Script" uid="uid://ed1daifh0yk1" path="res://monsters/scripts/monster.gd" id="1_s3gyj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4gyqm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qi2p4"]
+radius = 166.0271
+
+[node name="monster" type="CharacterBody2D" unique_id=1610025798]
+script = ExtResource("1_s3gyj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=851304053]
+shape = SubResource("CapsuleShape2D_4gyqm")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1108742638]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1127463301]
+shape = SubResource("CircleShape2D_qi2p4")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]

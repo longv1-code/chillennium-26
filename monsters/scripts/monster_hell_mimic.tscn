@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://mbffvg5wlel1"]
+
+[ext_resource type="Script" uid="uid://ed1daifh0yk1" path="res://monsters/scripts/monster.gd" id="1_grkjq"]
+[ext_resource type="Texture2D" uid="uid://de00ievuea62x" path="res://monsters/images/monster_hellmimi_lunge.png" id="2_y5qjl"]
+[ext_resource type="Texture2D" uid="uid://ccne1v0dflx1h" path="res://monsters/images/monster_hellmimi_latch.png" id="3_vvgxs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m0elv"]
+radius = 208.29066
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uls2k"]
+radius = 781.0314
+
+[node name="monster_hell_mimic" type="CharacterBody2D" unique_id=1629275517]
+script = ExtResource("1_grkjq")
+qte_type = "spam"
+lunge_texture = ExtResource("2_y5qjl")
+latched_texture = ExtResource("3_vvgxs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=729579495]
+texture = ExtResource("2_y5qjl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=674185390]
+visible = false
+shape = SubResource("CircleShape2D_m0elv")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1157919362]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=387412601]
+shape = SubResource("CircleShape2D_uls2k")
