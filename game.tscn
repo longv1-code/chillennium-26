@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://gd8trrv78luw"]
-
-[ext_resource type="PackedScene" path="res://control.tscn" id="1_80nbo"]
-
-[node name="Main" type="Node2D" unique_id=95656525]
-
-[node name="Control" parent="." unique_id=1310427511 instance=ExtResource("1_80nbo")]
-offset_top = 318.0
-offset_bottom = 318.0
