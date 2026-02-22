@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://8taesmmsmvrb" path="res://qteui.tscn" id="3_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bthdv30137x3d" path="res://player.tscn" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://dhwe0e6bpik2p" path="res://health_ui.tscn" id="5_p57ef"]
-[ext_resource type="PackedScene" uid="uid://dvw3xsolb37n0" path="res://scenes/dungeon_tm.tscn" id="6_dung"]
+[ext_resource type="PackedScene" uid="uid://xs3ol0fn3bx0" path="res://scenes/dungeon_tm.tscn" id="6_dung"]
 [ext_resource type="PackedScene" uid="uid://b2h0c78phty1l" path="res://scenes/evil_tm.tscn" id="7_evil"]
 [ext_resource type="PackedScene" uid="uid://bhjplh824aqru" path="res://scenes/floating_text.tscn" id="8_0tnpc"]
 
