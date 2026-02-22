@@ -49,6 +49,11 @@ func _unhandled_input(event):
 		# Spawn the floating text
 		var text_instance = FLOATING_TEXT.instantiate()
 		text_instance.text = nearby_item.item_name
+		
+		# --- THE MISSING LINE: Snap the text to the item's location! ---
+		text_instance.global_position = nearby_item.global_position 
+		# ----------------------------------------------------------------
+		
 		get_tree().current_scene.add_child(text_instance)
 		
 		nearby_item.queue_free()
