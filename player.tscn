@@ -246,8 +246,7 @@ position = Vector2(-0.14839172, 1.1691284)
 scale = Vector2(0.16599435, 0.16599435)
 sprite_frames = SubResource("SpriteFrames_j5n4i")
 animation = &"move down"
-frame = 5
-frame_progress = 0.33333305
+frame_progress = 0.12379953
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
