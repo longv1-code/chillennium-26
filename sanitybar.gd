@@ -1,6 +1,13 @@
 extends Control
 
 @onready var bar = $SanityBar
+@onready var music_player_1 = AudioStreamPlayer.new()
+@onready var music_player_2 = AudioStreamPlayer.new()
+var active_player: AudioStreamPlayer
+
+var music_stage_1 = preload("res://sound/stage1_bgmusic.mp3")
+var music_stage_2 = preload("res://sound/stage2_bgmusic.mp3")
+var music_stage_3 = preload("res://sound/stage3_bgmusic.mp3")
 
 # signal map changes
 signal map_changed(map_num)
@@ -43,6 +50,10 @@ func _ready(): # sets the bar values first load
 	bar.min_value = 0.0
 	base_dec_rate = max_value / timer
 	
+	add_child(music_player_1)
+	add_child(music_player_2)
+	active_player = music_player_1
+	
 func _process(delta): # continously run
 	check_stages()
 	drain_bar(delta)
@@ -51,6 +62,30 @@ func drain_bar(delta): # handles drain system
 	var total_drain: float = base_dec_rate * curr_drain_mult
 	bar.value -= total_drain * delta
 	
+func transition_music(new_stream: AudioStream):
+	# Determine which player is currently silent
+	var next_player = music_player_2 if active_player == music_player_1 else music_player_1
+	
+	# Prepare the next song
+	next_player.stream = new_stream
+	next_player.volume_db = -80 # Start silent
+	next_player.play()
+	
+	# Create the tween for cross-fade
+	var tween = create_tween().set_parallel(true)
+	
+	# Fade OUT current music
+	tween.tween_property(active_player, "volume_db", -80, 2.0)
+
+	# Fade IN new music
+	tween.tween_property(next_player, "volume_db", 0, 4.0)
+	
+	# Cleanup: Stop the old player once the fade is done
+	tween.chain().tween_callback(active_player.stop)
+	
+	# Swap the active player reference
+	active_player = next_player
+
 func collect_fuel():
 	bar.value = min(bar.value + refill_amt, max_value)
 	
@@ -87,10 +122,3 @@ func check_stages(): # triggers stages
 		bar.texture_over = h2_tex_4
 		map_changed.emit(4)
 		print("Stage 4 Started")
-	
-func _input(event):
-	# Check if a key was pressed, specifically the 'F' key
-	if event is InputEventKey and event.keycode == KEY_F and event.pressed:
-		# not event.is_echo() prevents it from rapid-firing if you hold the key down
-		if not event.is_echo(): 
-			collect_fuel()

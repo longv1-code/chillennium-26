@@ -40,3 +40,5 @@ offset_bottom = 869.0
 scale = Vector2(0.5006416, 0.5052623)
 texture_normal = ExtResource("5_rtw2f")
 texture_hover = ExtResource("6_oa1go")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=103300066]

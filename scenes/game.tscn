@@ -36,12 +36,12 @@ offset_right = 31.0
 offset_bottom = 6.0
 
 [node name="gameover" parent="UI" unique_id=1519405473 instance=ExtResource("5_u5sy4")]
+visible = false
 
 [node name="Player" parent="." unique_id=826294922 groups=["player"] instance=ExtResource("4_iywne")]
 position = Vector2(5296, 2020)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1236499846]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="GameOverScreen" type="CanvasLayer" parent="." unique_id=111111111]
